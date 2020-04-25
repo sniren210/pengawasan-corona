@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Web Pengawasan Virus Covid-19</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+
+    <style>
+    	@media(max-width: 990px) {
+				.emot{
+					width: 80px;
+				}
+    	}
+    </style>
+</head>
+<body >
+	
+	<div class="jumbotron jumbotron-fluid bg-primary" style="margin-bottom: 0;">
+		<div class="container">	
+		  <div class="container text-center text-white">
+		    <h1 class="display-4">Website Kasus Corona Yang Ada Di Dunia</h1>
+		    <p class="lead">Pantau Corona Menggunakan API Dari 
+		    	<br>
+		    	<a class="text-dark" href="https://kawalcorona.com" target="_blank">https://kawalcorona.com</a> Dan <a class="text-dark
+		    	" href="https://coronavirus-19-api.herokuapp.com">https://coronavirus-19-api.herokuapp.com</a>
+		    	<br>
+		    </p>
+		    <!-- <span>Insyallah Terpercaya</span> -->
+		  </div>
+		</div>
+	</div>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+		<div class="container">		
+		  <a class="navbar-brand text-white" href="#" >Navbar</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav">
+		      <a class="nav-item nav-link active text-white" href="#">Home</a>
+		      <a class="nav-item nav-link text-white" href="#">Features</a>
+		      <a class="nav-item nav-link text-white" href="#">Pricing</a>
+		    </div>
+		  </div>
+		</div>
+	</nav> -->
+	
+	<div class="kotak" style="min-height: 60vh;">
+		<div class="container mt-3">	
+			<div class="input-group mb-3 col-md-6">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text bg-primary
+			     text-white" for="inputGroupSelect01">Pilih Daerah</label>
+			  </div>
+			  <select class="custom-select" id="inputGroupSelect01">
+			    <option selected>Jawa Barat</option>
+			    <option value="1">One</option>
+			    <option value="2">Two</option>
+			    <option value="3">Three</option>
+			  </select>
+			</div>
+		</div>	
+		<div class="container mt-3">
+			<div class="row " style="box-sizing: border-box;">
+				<div class="col-md-4 bg-danger box text-white p-3 ">
+					<div class="row">
+						<div class="col-md-6">
+							<h5>Positif</h5>
+							<h2 id="lokalpositif"></h2>
+							<h5>Orang</h5>
+						</div>
+						<div class="col-md-6">
+							<img src="img/sad.svg" class="emot" alt="happy" style="min-height: 120px;" width="120px">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 bg-info box text-white p-3 ">
+					<div class="row">
+						<div class="col-md-6">
+							<h5>Meninggal</h5>
+							<h2 id="lokalmeninggal"></h2>
+							<h5>Orang</h5>
+						</div>
+						<div class="col-md-6">
+							<img src="img/cry.svg" class="emot" alt="happy" width="120px">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 bg-success box text-white p-3 " >
+					<div class="row">
+						<div class="col-md-6">
+							<h5>Sembuh</h5>
+							<h2 id="lokalsembuh"></h2>
+							<h5>Orang</h5>
+						</div>
+						<div class="col-md-6">
+							<img src="img/happy.svg" class="emot" alt="happy" width="120px">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-3">	
+			<div class="input-group mb-3 col-md-6">
+			  <div class="input-group-prepend">
+			    <label class="input-group-text bg-primary
+			     text-white" for="inputGroupSelect01">Pilih Negara</label>
+			  </div>
+			  <select class="custom-select" id="inputGroupSelect01">
+			    <option selected>Indonesia</option>
+			    <option value="1">One</option>
+			    <option value="2">Two</option>
+			    <option value="3">Three</option>
+			  </select>
+			</div>
+		</div>
+		<div class="container mt-3"> 
+			<div class="row" style="flex-wrap: inherit;">
+				<div class="col-md-12 bg-info box text-white p-3">
+					<div class="row">
+						<div class="col-md-6 ">
+							<h3>INDONESIA</h3>
+							<h5>Kasus : <span id="kasus"></span></h5>
+							<h5>Positif : <span id="positif"></span></h5>
+							<h5>Meninggal : <span id="meninggal"></span></h5>
+							<h5>Sembuh : <span id="sembuh"></span></h5>
+						</div>
+						<div class="col-md-6">
+							<img src="img/virus.webp" alt="happy" width="150px">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="footer bg-primary text-center text-white mt-3">
+		<span>Create By <a class="text-dark" href="https://www.facebook.com/rendi.ridwan.7798" target="_blank">Sniren-Ren</a> @miraimaDeveloper</span>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script src="app.js"></script>
+</body>
+</html>
